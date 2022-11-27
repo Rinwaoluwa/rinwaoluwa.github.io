@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 93.75%;
+  box-sizing: border-box;
+}
+@media (min-width: 24em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+:root {
+  --color-primary: hsl(0, 0%, 100%);
+  --color-primary-1: hsl(212, 45%, 89%);
+  --color-primary-2: hsl(220, 15%, 55%);
+  --color-primary-3: hsl(218, 44%, 22%);
+}
+
+::-moz-selection {
+  background-color: var(--color-primary-1);
+  color: var(--color-primary);
+}
+
+::selection {
+  background-color: var(--color-primary-1);
+  color: var(--color-primary);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+@media (max-width: 23em) {
+  .card {
+    margin-left: 3rem;
+    display: block;
+  }
+}
+.card__side {
+  position: absolute;
+  top: 0;
+  left: auto;
+  margin: 2rem auto;
+  height: 30rem;
+  width: 26%;
+  background-color: var(--color-primary);
+  padding: 1.5rem;
+  border-radius: 0.9rem;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: all 0.8s;
+}
+@media (max-width: 23em) {
+  .card__side {
+    width: 40%;
+  }
+}
+.card__side-back {
+  background-image: linear-gradient(to right bottom, var(--color-primary-3), var(--color-primary-2));
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  transform: rotateY(180deg);
+}
+.card__image {
+  width: 100%;
+  border-radius: 0.9rem;
+  margin-bottom: 1rem;
+}
+.card__text {
+  font-size: 1.5rem;
+  color: var(--color-primary-3);
+  margin-bottom: 1.5rem;
+}
+.card__paragraph {
+  color: var(--color-primary-2);
+}
+.card:hover .card__side-front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card__side-back {
+  transform: rotateY(0);
+}
+
+body {
+  background-color: var(--color-primary);
+}
+
+.container {
+  margin: 8rem auto;
+  background-color: var(--color-primary-1);
+  height: 40rem;
+  width: 80rem;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 23em) {
+  .container {
+    margin: 0;
+    height: 100vh;
+    width: 100vh;
+    box-shadow: none;
+  }
+}/*# sourceMappingURL=main.css.map */

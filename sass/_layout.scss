@@ -1,0 +1,22 @@
+////// LAYOUT
+
+
+body{
+    background-color: var(--color-primary);
+}
+
+.container{
+    margin: 8rem auto;
+    background-color: var(--color-primary-1);
+    height: 40rem;
+    width: 80rem;
+    box-shadow: 0 2rem 3rem rgba(black, .3);
+
+    @media (max-width: 23em) { 
+         margin: 0;
+          height: 100vh;
+          width: 100vh;
+          box-shadow:  none;
+    }
+
+}

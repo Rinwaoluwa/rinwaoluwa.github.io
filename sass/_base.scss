@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+html{
+    font-size: 93.75%; // 1rem = 15px
+    box-sizing: border-box;
+
+    @media (min-width: 24em) { //375px /16px = 24m;
+       font-size: 62.5%; // 1rem = 10px
+    }
+}
+
+:root{
+    --color-primary:  hsl(0, 0%, 100%); // WHITE
+    --color-primary-1: hsl(212, 45%, 89%); // LIGHT GRAY
+    --color-primary-2: hsl(220, 15%, 55%); // GRAYISH BLUE
+    --color-primary-3: hsl(218, 44%, 22%); // DARK BLUE
+}
+
+::selection{
+    background-color: var(--color-primary-1);
+    color: var(--color-primary);
+}
